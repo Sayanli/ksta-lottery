@@ -16,7 +16,7 @@ const Admin = () => {
 
     useEffect(() => {
         if (!isPaused) {
-            ws.current = new WebSocket("ws://192.168.1.84:8080/ws"); // создаем ws соединение
+            ws.current = new WebSocket("ws://192.168.0.197:8080/ws"); // создаем ws соединение
             ws.current.onopen = () => {
                 setStatus("Соединение открыто");  // callback на ивент открытия соединения
                 console.log("connected");
@@ -45,38 +45,28 @@ const Admin = () => {
 
     return (
         <>
-            <div class="text-block">
-                    <button className="button" onClick={() => {
+            <div>
+            <button className="button" onClick={() => {
                             console.log("completed");
                             ws.current.send(JSON.stringify(request_to_completed));
                         }}>
-                        <p className="text2">Завершить</p>
-                    </button>
-            </div>
-            <div>
-                    
+                        Завершить
+            </button>
                     <div class="area" >
                     <ul class="circles">
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
+                    <li><img className="img-figure" src="img/Круглешок.png"/></li>
+                            <li><img className="img-figure" src="img/Круглешок.png"/></li>
+                            <li><img className="img-figure" src="img/Круглешок.png"/></li>
+                            <li><img className="img-figure" src="img/Круглешок.png"/></li>
+                            <li><img className="img-figure" src="img/Круглешок.png"/></li>
+                            <li><img className="img-figure" src="img/Круглешок.png"/></li>
+                            <li><img className="img-figure" src="img/Круглешок.png"/></li>
+                            <li><img className="img-figure" src="img/Круглешок.png"/></li>
+                            <li><img className="img-figure" src="img/Круглешок.png"/></li>
+                            <li><img className="img-figure" src="img/Круглешок.png"/></li>
+                            <li><img className="img-figure" src="img/Мозги.png"/></li>
+                            <li><img className="img-figure" src="img/Мозги.png"/></li>
+                            <li><img className="img-figure" src="img/Мозги.png"/></li>
                     </ul>
                     </div >
             </div>

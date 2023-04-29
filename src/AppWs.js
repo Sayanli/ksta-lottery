@@ -26,17 +26,15 @@ const AppWs = () => {
 
     useEffect(() => {
         if (!isPaused) {
-            ws.current = new WebSocket("ws://192.168.1.84:8080/ws"); // создаем ws соединение
+            ws.current = new WebSocket("ws://192.168.0.197:8080/ws"); // создаем ws соединение
             ws.current.onopen = () => {
                 setStatus("Соединение открыто");  // callback на ивент открытия соединения
                 console.log("connected");
-                console.log(localStorage.getItem('token'));
                 if(localStorage.getItem('token')){
                     ws.current.send(JSON.stringify(request_to_get));
                 }else{
                     ws.current.send(JSON.stringify(request_to_gen));
                 }
-                console.log("compete");
             }
             ws.current.onclose = () => setStatus("Соединение закрыто"); // callback на ивент закрытия соединения
 
@@ -66,14 +64,13 @@ const AppWs = () => {
                 if(message.message == "completed"){
                     setData({completed:"Лотерея завершена"})
                 }
-                else if(message.message == "key not found"){
+                else if(message.message == "token is invalid"){
                     ws.current.send(JSON.stringify(request_to_gen));
                 }
             }
             
         };
     }, [isPaused]);
-    console.log(data);
     if(data && data.token){
         localStorage.setItem('token', data.token);
     }

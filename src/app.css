@@ -8,16 +8,23 @@
 }
 
 .button{
-    width: 100%;
-    height: 100px;
+    top: 50%;
+    left: 50%;
+    padding: 5vh;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    position: absolute;
     opacity: 0.7;
-    border-radius: 40px;
-    text-align: center;
-    align-items: center;
-    margin: auto;
-    margin-top: 20px;
-    padding: 15%;
+    width: 90vw;
+    font-size: 100px;
+    max-width: 1400px;
+    border-radius: 6vh;
+    border: none;
 }
+
+.button:active {
+    background-color: #a5cfffb7;
+  }
 
 .text-block {
     top: 5%;
@@ -46,7 +53,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     font-family: Arial, sans-serif;
-    font-size: 10vh;
+    font-size: 14vh;
     font-weight: bold;
 
 }
@@ -57,20 +64,6 @@
     left: 50%;
     transform: translate(-50%, 0);
     font-family: Arial, sans-serif;
-}
-
-.box2{
-    padding: 1vh;
-    text-align: center;
-    align-items: center;
-    opacity: 0.7;
-    position: relative;
-    margin: auto;
-    margin-top: 3vh;
-    width: auto;
-    background: white;
-    border-radius: 6vh;
-    
 }
 
 P {
@@ -88,7 +81,7 @@ h2 {
     background: linear-gradient(#2762a7, #eb325f, #f7b705);  
     background: -webkit-linear-gradient(to up, #2762a7, #eb325f, #f7b705);  
     width: 100vw;
-    height:100vh;
+    height: 100vh;
 }
 
 .box{
@@ -98,8 +91,22 @@ h2 {
     position: relative;
     margin: auto;
     margin-top: 2vh;
-    width: 50vw;
-    height: 50vw;
+    width: 30vh;
+    height: 30vh;
+    background: white;
+    border-radius: 6vh;
+}
+
+.box2{
+    padding: 2vh;
+    text-align: center;
+    align-items: center;
+    opacity: 0.7;
+    position: relative;
+    margin: auto;
+    margin-top: 3vh;
+    width: 85vw;
+    max-width: 1000px;
     background: white;
     border-radius: 6vh;
 }
@@ -114,8 +121,8 @@ h2 {
     overflow: hidden;
 }
 .image{
-    width: 80vw;
-    height: auto;
+    width: auto;
+    height: 20vh;
     opacity: 0.8;
 }
 
