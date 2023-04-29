@@ -2,6 +2,7 @@
 
 *{
     position: sticky;
+    overflow-y: hidden;
     margin: 0px;
     padding: 0px;
 }
@@ -244,7 +245,7 @@ h2 {
 @keyframes  animate{
 
     0%{
-        transform: translateY(0vh) translateX(0vh) rotate(0deg);
+        transform: translateY(0) translateX(0vh) rotate(0deg);
         opacity: 1;
     }
 
