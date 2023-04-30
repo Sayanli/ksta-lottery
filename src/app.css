@@ -79,7 +79,6 @@ h2 {
 
 .area{
     background: linear-gradient(#2762a7, #eb325f, #f7b705);  
-    background: -webkit-linear-gradient(to up, #2762a7, #eb325f, #f7b705);  
     width: 100vw;
     height: 100vh;
 }

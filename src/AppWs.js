@@ -26,7 +26,7 @@ const AppWs = () => {
 
     useEffect(() => {
         if (!isPaused) {
-            ws.current = new WebSocket("ws://192.168.0.197:8080/ws"); // создаем ws соединение
+            ws.current = new WebSocket("ws://83.97.105.73:8080/ws"); // создаем ws соединение
             ws.current.onopen = () => {
                 setStatus("Соединение открыто");  // callback на ивент открытия соединения
                 console.log("connected");
