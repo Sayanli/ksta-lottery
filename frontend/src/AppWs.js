@@ -58,7 +58,7 @@ const AppWs = () => {
                 if(message.message == "number"){
                     setData(message.data);
                 }else if(message.message == "win"){
-                    setWinMesseg("пойди туда - не знаю куда, \t возьми то - не знаю что пвыпвапвапвп вапвы пвап вап вап вап выпвапв пвп впвп ");
+                    setWinMesseg("Ты победил! \n Поднимайся на сцену!");
                 }
             }else{
                 if(message.message == "completed"){
